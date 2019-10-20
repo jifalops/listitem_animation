@@ -42,7 +42,7 @@ class _ListItemState extends State<ListItem> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: selected ? 8 : 0,
+      elevation: selected ? 4 : 0,
       child: ListTile(
         leading: Hero(
           tag: 'image-${widget.index}',
@@ -70,7 +70,8 @@ class _ListItemState extends State<ListItem> {
             ),
           );
 
-          // Returning to this screen...
+          // Returning to this screen from details...
+
           // This works around the text being too large for its container when
           // animating back from the DetailsScreen.
           setState(() => largeText = true);
