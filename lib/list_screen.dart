@@ -1,8 +1,7 @@
-import 'package:animations/hero_fix.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart' show timeDilation;
 import 'details_screen.dart';
-import 'package:flutter/scheduler.dart';
+import 'hero_fix.dart';
 
 class ListScreen extends StatelessWidget {
   ListScreen(this.images);
