@@ -9,21 +9,24 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 64),
-              child: Center(
-                child: Hero(
-                  tag: 'title-$index',
-                  child: Text(
-                    'Thing $index details',
-                    style: Theme.of(context).textTheme.display1,
-                  ),
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.symmetric(vertical: 64),
+          child: Center(
+            child: Hero(
+              tag: 'title-$index',
+              child: Material(
+                // color: Colors.transparent,
+                child: Text(
+                  'Thing $index details',
+                  style: Theme.of(context).textTheme.display1,
                 ),
               ),
             ),
-            Hero(tag: 'image-$index', child: Image.network(url))
-          ],
-        ));
+          ),
+        ),
+        Hero(tag: 'image-$index', child: Image.network(url))
+      ],
+    ));
   }
 }
