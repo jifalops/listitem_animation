@@ -41,9 +41,9 @@ class _ListItemState extends State<ListItem> {
           tag: 'image-${widget.index}',
           child: Image.network(widget.url, height: 64, width: 64),
         ),
-        title: HeroFix(
+        title: HeroFix2(
           tag: 'title-${widget.index}',
-          child: Text('Thing ${widget.index}'),
+          text: 'Thing ${widget.index}',
         ),
         subtitle: Text('Pick me!'),
         onTap: () async {
@@ -62,7 +62,7 @@ class _ListItemState extends State<ListItem> {
 
           // Wait for hero animations to complete, then de-elevate the card.
           await Future.delayed(
-              Duration(milliseconds: 200 * timeDilation.round()));
+              Duration(milliseconds: 300 * timeDilation.round()));
           setState(() => selected = false);
         },
       ),
