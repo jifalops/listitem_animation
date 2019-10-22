@@ -1,5 +1,5 @@
-import 'package:animations/hero_fix.dart';
 import 'package:flutter/material.dart';
+import 'hero_text.dart';
 
 class DetailsScreen extends StatelessWidget {
   DetailsScreen(this.index, this.url);
@@ -14,7 +14,7 @@ class DetailsScreen extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(vertical: 64),
           child: Center(
-            child: HeroFix2(
+            child: HeroText(
               tag: 'title-$index',
               text: 'Thing $index details',
               style: Theme.of(context).textTheme.display1,

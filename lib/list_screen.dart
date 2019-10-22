@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'details_screen.dart';
-import 'hero_fix.dart';
+import 'hero_text.dart';
 
 class ListScreen extends StatelessWidget {
   ListScreen(this.images);
@@ -41,7 +41,7 @@ class _ListItemState extends State<ListItem> {
           tag: 'image-${widget.index}',
           child: Image.network(widget.url, height: 64, width: 64),
         ),
-        title: HeroFix2(
+        title: HeroText(
           tag: 'title-${widget.index}',
           text: 'Thing ${widget.index}',
         ),

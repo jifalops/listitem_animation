@@ -4,25 +4,25 @@ import 'package:flutter/material.dart';
 /// during the hero transition. May fix other inherited widget bugs with hero.
 ///
 /// See https://github.com/flutter/flutter/issues/12463#issuecomment-387505006.
-class HeroFix1 extends StatelessWidget {
-  HeroFix1({@required this.tag, @required this.text, this.style});
+class HeroFix extends StatelessWidget {
+  HeroFix({@required this.tag, @required this.child});
   final String tag;
-  final String text;
-  final TextStyle style;
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return Hero(
       tag: tag,
       child: Material(
         color: Colors.transparent,
-        child: Text(text, style: style ?? DefaultTextStyle.of(context).style),
+        child: child,
       ),
     );
   }
 }
 
-class HeroFix2 extends StatelessWidget {
-  HeroFix2({@required this.tag, @required this.text, this.style});
+/// A text [Hero] that will shrink and grow text as part of the animation.
+class HeroText extends StatelessWidget {
+  HeroText({@required this.tag, @required this.text, this.style});
   final String tag;
   final String text;
   final TextStyle style;
