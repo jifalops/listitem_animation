@@ -41,10 +41,14 @@ class _ListItemState extends State<ListItem> {
           tag: 'image-${widget.index}',
           child: Image.network(widget.url, height: 64, width: 64),
         ),
-        title: HeroText(
+        title: Hero(
           tag: 'title-${widget.index}',
-          text: 'Thing ${widget.index}',
+          child: Text('Thing ${widget.index}'),
         ),
+        // title: HeroText(
+        //   tag: 'title-${widget.index}',
+        //   text: 'Thing ${widget.index}',
+        // ),
         subtitle: Text('Pick me!'),
         onTap: () async {
           // Elevate card

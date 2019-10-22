@@ -14,11 +14,18 @@ class DetailsScreen extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(vertical: 64),
           child: Center(
-            child: HeroText(
+            child: Hero(
               tag: 'title-$index',
-              text: 'Thing $index details',
-              style: Theme.of(context).textTheme.display1,
+              child: Text(
+                'Thing $index details',
+                style: Theme.of(context).textTheme.display1,
+              ),
             ),
+            // child: HeroText(
+            //   tag: 'title-$index',
+            //   text: 'Thing $index details',
+            //   style: Theme.of(context).textTheme.display1,
+            // ),
           ),
         ),
         Hero(tag: 'image-$index', child: Image.network(url))
